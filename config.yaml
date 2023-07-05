@@ -1,0 +1,7 @@
+base_dir: model
+log_level: INFO
+base:
+  dataset_dir: data/demographics.csv
+  age_group: ['0-17', '18-49', '50-64', '65+']
+  age_group_index: 0
+  save_figs: False
