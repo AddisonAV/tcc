@@ -3,5 +3,5 @@
 # Pre requirements
 For now use: 
 ```
-pip install -r requirements.txt****
+pip install -r requirements.txt
 ```
