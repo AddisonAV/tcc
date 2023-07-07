@@ -27,7 +27,6 @@ def generate_graph_seq2seq_io_data(
 
     num_samples, num_nodes = df.shape
     data = np.expand_dims(df.values, axis=-1)
-    data = np.array(data, dtype=np.double)          # Convert to double as needed in tourch model
     data_list = [data]
     if add_time_in_day:
         time_ind = (df.index.values - df.index.values.astype("datetime64[D]")) / np.timedelta64(1, "D")
@@ -112,12 +111,12 @@ def main(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--output_dir", type=str, default="C:/Users/Addison/Documents/MEGA/Linux/Faculdade/TCC/Github/data/", help="Output directory."
+        "--output_dir", type=str, default="data/", help="Output directory."
     )
     parser.add_argument(
         "--covid_df_filename",
         type=str,
-        default="C:/Users/Addison/Documents/MEGA/Linux/Faculdade/TCC/Github/data/covid-db.h5",
+        default="data/covid-db.h5",
         help="Covid report readings.",
     )
     args = parser.parse_args()
